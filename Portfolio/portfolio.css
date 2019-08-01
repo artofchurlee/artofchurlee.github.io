@@ -1,0 +1,202 @@
+/* Body */
+body {
+    margin:0% /* Ensures site displays to edges of screen */
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden; /* Ensures any content overflowing is not displayed */
+    background-color: #6ed8ff;
+    position: fixed;
+    top: 0; /* No space above navbar */
+    width: 100%; /* Makes navbar span width of page */
+    z-index: 100; /*Ensures navbar is on top */
+}
+
+/* Navbar text */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #19befa;
+    color: black;
+    font-weight: bold;
+}
+
+/* Video */
+#code_video {
+    position: fixed; /* Fixes video to the page */
+    right:0;
+    bottom: 0;
+    min-width: 100%; /* Ensures video takes up the whole page */
+    z-index: -1;
+}
+
+/* Text over video */
+.video_text {
+    background-color: rgba(0, 49, 82, 0.2); /* Semi-transparent background for text */
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px; /* adds padding around text */
+    margin-top: 25%;
+}
+
+/* Table- this section covers the styling of columns and rows within our table */
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 420px;
+    background-color: #cff2ff;
+}
+
+.column_2 {
+    float: right;
+    width: 50%;
+    padding: 10px;
+    padding-top: 2%;
+    height: 420px;
+    background-color: #6ed8ff;
+}
+
+.column_3 {
+    float: right;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: #cff2ff;
+}
+
+.column_4 {
+    float:left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 2%;
+    height: 400px;
+    background-color: #6ed8ff;
+}
+
+.row:after {
+    content: ""; 
+    display: table;
+    clear: both;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    margin-top: 2%;
+    color: #002f40;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+center {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+a {
+    color: blue; /* Ensuring all links are blue */
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* allows user to resize the height */
+    font-family: "Times New Roman", Times, serif;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 1px black;
+    border-radius:  4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Times New Roman", Times, serif;
+}
+
+input[type=submit]:hover {
+	background-color: white; /* Makes the background turn white when hovered over */
+	color: black; /* Makes the font turn black when hovered over */
+	font-weight: bold; /* Makes the font bold when hovered over */
+	transform: scale(1.2); /* Makes the button increase 1.2 times in size */ 
+	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
+}
+
+center:hover {
+    transition: transform 1.5s;
+    transform: scale(1.2);
+}
+
+h1, h2:hover {
+    color: black;
+    transition: transform 1s;
+    transform: scale(1.2);
+}
+
+img:hover {
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+}

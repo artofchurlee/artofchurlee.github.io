@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shirley Wu</title>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+    </head>
+
+    <body class="background">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!--HOME-->
+        <br>
+        <br>
+
+        <!-- Background Video/Image -->
+        <div id="home">
+            <video autoplay muted loop id="code_video">
+                <source src="video/code_video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video. <!--Display message if video does not run-->
+            </video>
+        </div>
+
+        <!--Video Text-->
+        <div class="video_text">
+            <h1 style="color:white;">Shirley's Portfolio</h1>
+                <p>
+                    <strong>
+                            <center>
+                            My name is Shirley! Welcome to my portfolio website.
+                            <br> This website will contain my background and experience.
+                            <br> Thank you for stopping by!
+                            </center>
+                            <br><br>
+                    </strong>
+                </p>
+        </div>
+
+
+        <!--About Section-->
+        <div class="row" id="about">
+            <div class="column_2">
+                <img src="./images/coding.jpg" alt="coding">
+            </div>
+            <div class="column_1">
+                <h2>About</h2>
+                <p>I am an aspiring software developer! I love to code. 
+                    My hobbies include photography and travel.
+                    I have a B.S. in Political Science with a focus in International Relations and
+                    I studied coding at The Tech Academy. I am trained and experienced in HTML, CSS, etc.
+                    I would love to work with you! <a href="#contact">Contact me below!</a>
+                </p>
+            </div>
+        </div>
+        <!--- End About -->
+
+        <!---Github Section-->
+        <div class="Row" id="github">
+            <div class="column_3">
+            <h2>GitHub</h2>
+                <p>You can view my coding projects on my GitHub Profile here:
+                    <br><text-align:center><a href="https://github.com/artofchurlee">Shirley's GitHub</a></text-align:center>
+                </p>
+            </div>
+            <div class="column_4">
+                <a href="https://github.com/artofchurlee" target="_blank"><img src="./images/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+
+        <!--Contact Section-->
+        <div class="row" id="contact">
+            <div class="column_2">
+                <img src="images/me.jpg" alt="My Picture">
+            </div>
+            <div class="column_1">
+                <h2>Contact Me!</h2>
+                <form action="" method="get">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" placeholder="Please write your message here">
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+                <p></p>
+        </footer>
+
+    </body>
+</html>
