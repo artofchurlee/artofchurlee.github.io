@@ -44,6 +44,91 @@
                 </p>
         </div>
 
+        <!-- Slideshow Section -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1/6</div>
+                        <img class="Slide_Show_Images" src="images/me.jpg" style="width:100%">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2/6</div>
+                        <img class="Slide_Show_Images" src="images/htmlcssjs.jpg" style="width:100%">
+                        <div class="text">I'm a full stack web developer, traind in HTML, CSS, Javascript</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3/6</div>
+                        <img class="Slide_Show_Images" src="images/python.jpg" style="width:100%">
+                        <div class="text">Python,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4/6</div>
+                        <img class="Slide_Show_Images" src="images/cnet.png" style="width:100%">
+                        <div class="text">.NET Framework, ASP.NET, MVC</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5/6</div>
+                        <img class="Slide_Show_Images" src="images/sql.jpg" style="width:100%">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6/6</div>
+                        <img class="Slide_Show_Images" src="images/me2.JPG" style="width:100%">
+                        <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                        </div>
+                    </div>
+
+                </div>
+               
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- JS Function over slideshow -->
+        <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex+=n);
+            }
+            function currentSlide(n) {
+                showSlides(slideIndex=n);
+            }
+            function showSlides(n) {
+                var i;
+                var slides=document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides [i].style.display="none";
+                        }
+                        for (i = 0; i <dots.length; i++) {
+                            dots[i].className = dots[i].classname.replace(" active","");
+                        }
+                    slides[slideIndex-1].style.display= "block";
+                    dots[slideIndex-1].className + " active"; 
+            }
+
+            
+            </script>
 
         <!--About Section-->
         <div class="row" id="about">
@@ -76,20 +161,21 @@
         </div>
 
         <!--Contact Section-->
-        <div class="row" id="contact">
-            <div class="column_2">
-                <img src="images/me.jpg" alt="My Picture">
-            </div>
-            <div class="column_1">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">Contact</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/lwu010@ucr.edu" method="POST" class="form-container">
                 <h2>Contact Me!</h2>
-                <form action="" method="get">
                     <label>Name:</label>
                         <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
+                    <label>Phone:</label>
+                        <input type="text" placeholder="Please enter your phone number here">
+                     <label>Email:</label>
                         <input type="text" placeholder="Please enter your email here">
                     <label>Message:</label>
                         <input type="text" placeholder="Please write your message here">
-                        <input type="submit" value="Submit">
+                        <button type="submit" class="btn">Submit</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
             </div>
         </div>
@@ -98,6 +184,6 @@
         <footer>
                 <p></p>
         </footer>
-
+        <script src="porfolio.js"></script>
     </body>
 </html>

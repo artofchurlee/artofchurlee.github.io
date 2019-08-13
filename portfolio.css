@@ -1,6 +1,13 @@
+/* Entire Document */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
-    margin:0% /* Ensures site displays to edges of screen */
+    margin:0%; /* Ensures site displays to edges of screen */
+    letter-spacing: .2vw;
+    font-family: "Times New Roman", Times, serif;
 }
 
 /* Navbar */
@@ -24,6 +31,8 @@ body {
     font-size: 20px;
     text-align: center;
 }
+
+
 
 .navbar a:hover {
     background-color: #19befa;
@@ -49,6 +58,96 @@ body {
     font-size: 20px;
     padding: 20px; /* adds padding around text */
     margin-top: 25%;
+}
+
+/* Slideshow Styling */
+#Slideshow_Background {
+    background: rgba(0, 49, 82, 0.2);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .1.4}
+    to {opacity: 1}
+}
+
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 10px rgba(0,0,0,.75);
+    width: auto;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+
+}
+
+/* Positioning Right hand next button */
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect on slide show buttons */
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,.8);
+    color: white;
+}
+
+/* Dots under slideshow */
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1
+}
+
+/* Hover effect for dots */
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 /* Table- this section covers the styling of columns and rows within our table */
@@ -183,6 +282,7 @@ img:hover {
 	-webkit-animation: flash 1.5s;
 	animation: flash 1.5s;
 }
+
 @-webkit-keyframes flash {
 	0% {
 		opacity: .4;
@@ -199,4 +299,77 @@ img:hover {
 		opacity: 1;
 	}
 }
+
+
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw}
 }
+
+/* Button used to open contact form */
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: skyblue;
+    color: black;
+    border: solid #8080ff;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+/* Popup form hidden by default */
+.form-popup {
+    display:  none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: skyblue;
+    border: solid #8080ff;
+}
+
+.form-container input[type=text], .form-container input [type=password] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: solid rgb();
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1vw;
+}
+
+.form-container .btn, .form-container .cancel{
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+/* Button Styling */
+button {
+    font-family: 'Times New Roman', times, serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1vw 1vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+button:hover, .form-container .btn:hover, .form-container .cancel:hover {
+    color: white;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
