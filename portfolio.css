@@ -117,6 +117,21 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
+/* Slideshow Text */
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', times, serif;
+    background-color: rgba(0,0,0,.75);
+    font-size: 1vw;
+    border-radius: 7px 7px 7px 7 px;
+    font-weight: bold;
+}
+
 /* Hover effect on slide show buttons */
 
 .Previous:hover, .Next:hover {
